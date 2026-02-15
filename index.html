@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvere Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+  <div class="container">
+    <div class="logo"> <img src="images/hector.png" alt=" logo"> </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger">&#9776;</div>
+
+    <!-- Desktop menu -->
+    <ul class="desktop-menu">
+      
+      <li><a href="#" data-target="fleet">Fleet</a></li>
+      <li><a href="#" data-target="howItWorks">How It Works</a></li>
+      <li><a href="#" data-target="whyUs">Why Choose Us</a></li>
+    </ul>
+
+    <!-- Mobile menu -->
+    <ul class="mobile-menu">
+        <li class="close-menu"><span>&times;</span></li>
+      <li><a href="#" data-target="fleet">Fleet</a></li>
+      <li><a href="#" data-target="howItWorks">How It Works</a></li>
+      <li><a href="#" data-target="whyUs">Why Choose Us</a></li>
+    </ul>
+  </div>
+</header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <section id="hero" class="hero">
+        <div class="container hero-conent">
+            <h2 class="hero-title"> <span> Book Your </span> <span>Car in Seconds.</span> <span>Instant WhatsApp</span> <span>Confirmation.</span> 
+            </h2>
+                <p> No waiting on calls your booking is confirmed automatically</p>
+                <a href="#fleet" class="btn">View Cars</a>
+        </div>
+    </section>
+
+    <section id="howItWorks" class="how-it-works">
+        <div class="container how-card">
+            <h2>Booking Made Easy</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Choose Your Car</h3>
+                    <p>Browse our fleet and find your perfect ride.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Set Dates</h3>
+                    <p>Pick when you want it and where to pick it up.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Book Instantly via WhatsApp</h3>
+                    <p>Send your booking in seconds and secure your car.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fleet" class="fleet">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Vehicles</h2>
+        </div>
+        <div class="cars">
+          <div class="car-card" onclick="openBooking('Toyota Corolla')">
+            <img src="images/Lease Special on 2013 Corolla.jfif.png">
+            <div class="info">
+                <h3>Toyota Corolla</h3>
+                <p class="content">AC, 4 passenger, good for city trips.</p>
+                <p class="price">$40 / day</p>
+                <button class="book-btn" onclick="openBooking('Toyota Corolla')">Book Now</button>
+            </div>
+          </div> 
+          
+          <div class="car-card" onclick="openBooking('Land Cruiser Prado')">
+             
+            <img src="images/5cc7c893a976731afd7b9a077348a2cd.png">
+             <div class="info" >
+                <h3>Land Cruiser Prado</h3>
+                <p class="content">AC, 6 passenger, 4WD, perfect for luxury rides.</p>
+                <p class="price">$55 / day</p>
+                <button class="book-btn" onclick="openBooking('Land Cruiser')">Book Now</button>
+             </div>
+          </div>
+
+          <div class="car-card" onclick="openBooking('Toyota Hilux')">
+            <img src="images/hillux.png">
+            <div class="info">
+                <h3>Toyota Hilux</h3>
+                <p class="content">AC, 4 passenger, 4WD, perfect for rough roads</p>
+                <p class="price">120 / day</p>
+                <button class="book-btn" onclick="openBooking('Toyota Hilux')">Book Now</button>
+            </div>
+          </div>
+        </div>
+        
+    </section>
+
+    <section id="whyUs" class="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <h3>Well Maintained Cars</h3>
+                    <p>All vehicles are serviced and inspected regularly.</p>
+                </div>
+                <div class="feature">
+                    <h3>24/7 Support</h3>
+                    <p>We are always available to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+       <div class="contacts-icon-desktop" style="
+        display: flex; gap:20px; justify-content:center; margin-top:20px;">
+        <a href="tel: +2348138065824" class="phone-desktop"><i class="fa fa-phone"></i>+234 813 806 5824</a>
+        <a href="mailto:ugochukwuchieke08@gmail.com" class="phone-desktop"><i class="fa fa-envelope">
+        </i>ugochukwuchieke08@gamil.com</a>
+        <a href="https://goo.gl/maps/example" target="_blank" class="phone-desktop">
+            <i class="fa fa-map-marker-alt">Imo, Nigeria</i></a>
+         </div>
+
+         <div class="contacts-icon-mobile" style="
+         gap:20px; justify-content:center; margin-top:20px;">
+        <a href="tel: +2348138065824" class="phone-mobile"><i class="fa fa-phone"></i>+234 813 806 5824</a>
+        <a href="mailto:ugochukwuchieke08@gmail.com" class="phone-mobile"><i class="fa fa-envelope">
+        </i>ugochukwuchieke08@gamil.com</a>
+        <a href="https://goo.gl/maps/example" target="_blank" class="phone-mobile">
+            <i class="fa fa-map-marker-alt">Imo, Nigeria</i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Melvere Logistics. All Rights Reserved. </p>
+    </footer>
+    <!-- Floating Mobile Buttons -->
+<div class="mobile-actions">
+   
+    <a href="https://wa.me/2348138065824" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+</div>
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeBooking()">×</span>
+
+        <h2>Book Vehicle</h2>
+
+        <form onsubmit="sendToWhatsApp(event)">
+            <input 
+                type="text" 
+                id="vehicleName" 
+                placeholder="Vehicle"
+                readonly
+            >
+
+            <input type="date" id="startDate" required>
+            <input type="date" id="endDate" required>
+
+            <input type="text" id="pickupLocation"
+             placeholder="Pickup Location" required> 
+            <input type="tel" id="customerPhone" 
+            placeholder="Your Phone Number" required>
+
+            <button type="submit">Book via WhatsApp</button>
+        </form>
+    </div>
+</button>
+</div>
+<script>
+function openBooking(carName) {
+    document.getElementById("bookingModal").style.display = "block";
+    document.getElementById("vehicleName").value = carName;
+}
+
+function closeBooking() {
+    document.getElementById("bookingModal").style.display = "none";
+}
+
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    const car = document.getElementById("vehicleName").value;
+    const start = document.getElementById("startDate").value;
+    const end = document.getElementById("endDate").value;
+    const pickup = document.getElementById("pickupLocation").value;
+    const phone = document.getElementById("customerPhone").value;
+
+    const businessNumber = "2348138065824"; // <-- REPLACE WITH REAL NUMBER
+
+    const message = 
+        `Hello, I want to book ${car}%0A` +
+        `From: ${start}%0A` +
+        `To: ${end}%0A` +
+        `Pickup: ${pickup}%0A` +
+        `My Phone: ${phone}`;
+
+    const whatsappURL = `https://wa.me/${businessNumber}?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const closeBtn = document.querySelector(".close-menu");
+ 
+
+  // Toggle mobile menu
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("active");
+  });
+
+ 
+
+  // Close menu when X clicked
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+    hamburger.classList.remove("active");
+  });
+
+ 
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      mobileMenu.classList.remove("open");
+      hamburger.classList.remove("active");
+    }
+  });
+
+  // Smooth scroll + close menu
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const targetId = link.getAttribute("data-target");
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      mobileMenu.classList.remove("open");
+      hamburger.classList.remove("active");
+    });
+  });
+});
+
+ // Smooth scroll for desktop
+  document.querySelectorAll(".desktop-menu a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const targetId = link.getAttribute("data-target");
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      desktopMenu.classList.remove("open");
+      hamburger.classList.remove("active");
+    });
+  });
+
+</script>
+</body>
+</html>
