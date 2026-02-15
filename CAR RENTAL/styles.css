@@ -1,0 +1,485 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- GENERAL ---------- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+#cars{
+    padding-top: 30px; 
+}
+
+h2 {
+    margin-bottom: 15px;
+    margin: 10px;
+}
+p{
+    margin: 10px;
+}
+
+/* ---------- HEADER ---------- */
+
+/* HEADER BASE */
+.header {
+  width: 100%;
+  background: #0f172a;
+  color: white;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.logo img{
+    width: 210px;
+    margin-left: -80px;
+    margin-top: -50px;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.desktop-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-top: -10px ;
+  color: #fff;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.mobile-menu li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+.desktop-menu{
+    margin-top: -40px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+    max-height: 500px;
+  }
+
+  .close-menu{
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0f172a;
+  }
+}
+   
+/* ---------- HERO ---------- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url(images/premium_photo-1661290470322-a313098e7c2a.png) center/cover;
+    color: #fff;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top:60px
+} 
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-title span {
+display: inline;
+opacity: 0;
+transform: translateY(20px);
+animation: fadeWord 0.6s ease forwards;
+}
+
+.hero-title span:nth-child(1)
+{animation-delay: 0.2s;}
+.hero-title span:nth-child(2)
+{animation-delay: 0.5s;}
+.hero-title span:nth-child(3)
+{animation-delay: 0.9s;}
+.hero-title span:nth-child(4)
+{animation-delay: 1.5s;}
+
+
+@keyframes fadeWord{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero p {
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.content{
+    color: rgb(73, 73, 73);
+}
+
+
+/* How it Works Card */
+.how-card{
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px; 
+    max-width: 900px;
+    margin: -50px auto 60px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center ;
+    position: relative;
+    z-index: 1;
+}
+
+.how-card h2{
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+.steps{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step{
+    flex: 1 1 250px;
+    background: rgb(137, 137, 137);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0,0.5);
+}
+
+#howitWorks{
+    scroll-margin-top: 100px;
+}
+
+.step p{
+    font-size: 14px;
+    color: #fff;
+}
+.step h3{
+    color: #fff
+}
+/* ---------- BUTTON ---------- */
+.btn {
+    background: #0f172a;
+    color: #fff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 10px;
+    transition: 0.5s;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ---------- CARS ---------- */
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    transition: 0.5s;
+}
+
+.car-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    color: black;
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+    transition: 0.5s;
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.car-card .info {
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.price {
+    color: #2563eb;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+/* ---------- FEATURES ---------- */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.feature {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #0f172a;
+    color: #fff;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+    background: #f1f5f9;
+    
+
+}
+
+.contacts-icons a:hover {
+   color: #ff6600;
+   text-decoration: none; 
+} 
+
+@media screen and (min-width: 750px ) {
+    .phone-mobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .phone-desktop{
+        display: none;
+    }
+    .phone-mobile{
+        display: block;
+        margin: 20px;
+    }
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---------- MOBILE FIX ---------- */
+@media (max-width: 768px) {
+   
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ---------- FLOATING MOBILE BUTTONS ---------- */
+.mobile-actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.mobile-actions a {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    line-height: 55px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.call-btn {
+    background: #2563eb;
+}
+
+.whatsapp-btn {
+    background: #22c55e;
+}
+
+
+
+/*-------MODAL-------*/
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.book-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #0f172a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.modal-content{
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto;
+}
+.model-content h2{
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+.modal-content input .modal-content button{
+width: 100%;
+padding: 12px;
+margin-bottom: 12px;
+border-radius: 6px;
+border: 1px soild #ddd;
+
+}
+
+.modal-content button{
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+.close-btn{
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
